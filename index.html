@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sender deg tilbake …</title>
+  </head>
+  <body
+    style="
+      font-family: -apple-system, sans-serif;
+      text-align: center;
+      padding: 3rem;
+    "
+  >
+    <p>Sender deg tilbake til Sparegris …</p>
+    <script>
+      location.replace("sparegris://enablebanking" + window.location.search);
+    </script>
+    <p><a id="manual" href="#">Trykk her hvis ingenting skjer</a></p>
+    <script>
+      document.getElementById("manual").href =
+        "sparegris://enablebanking" + window.location.search;
+    </script>
+  </body>
+</html>
